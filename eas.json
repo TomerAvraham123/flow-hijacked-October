@@ -1,0 +1,49 @@
+{
+  "cli": {
+    "version": ">= 21.6.0",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "environment": "development",
+      "developmentClient": true,
+      "distribution": "internal",
+      "android": { "buildType": "apk" }
+    },
+    "preview": {
+      "environment": "preview",
+      "distribution": "internal",
+      "channel": "preview",
+      "android": { "buildType": "apk" }
+    },
+    "store-preview": {
+      "environment": "preview",
+      "distribution": "internal",
+      "channel": "preview",
+      "env": {
+        "EXPO_PUBLIC_FLOW_API_BASE_URL": "https://flowhijacked.com",
+        "EXPO_PUBLIC_FLOW_CANONICAL_URL": "https://flowhijacked.com",
+        "EXPO_PUBLIC_STORE_SCREENSHOT_MODE": "approved-non-sensitive-fixtures"
+      },
+      "android": { "buildType": "apk" }
+    },
+    "production": {
+      "environment": "production",
+      "distribution": "store",
+      "autoIncrement": true,
+      "channel": "production",
+      "env": {
+        "EXPO_PUBLIC_FLOW_API_BASE_URL": "https://flowhijacked.com",
+        "EXPO_PUBLIC_FLOW_CANONICAL_URL": "https://flowhijacked.com",
+        "EXPO_PUBLIC_STORE_SCREENSHOT_MODE": "disabled"
+      },
+      "android": {
+        "buildType": "app-bundle",
+        "credentialsSource": "remote"
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}
