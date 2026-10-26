@@ -1,0 +1,12 @@
+node_modules/
+.expo/
+dist/
+android/
+coverage/
+*.jks
+*.keystore
+google-services.json
+.env
+.env.*
+!.env.example
+npm-debug.log*
